@@ -1,0 +1,938 @@
+<!doctype html>
+<html class="no-js" lang="zxx" xmlns:th="http://www.thymeleaf.org">
+    
+<!-- index-331:38-->
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Trang chủ</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" th:href="@{/user/images/favicon.png}" />
+        <!-- Material Design Iconic Font-V2.2.0 -->
+        <link rel="stylesheet" th:href="@{/user/css/material-design-iconic-font.min.css}" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" th:href="@{/user/css/font-awesome.min.css}"/>
+        <!-- Font Awesome Stars-->
+        <link rel="stylesheet" th:href="@{/user/css/fontawesome-stars.css}"/>
+        <!-- Meanmenu CSS -->
+        <link rel="stylesheet" th:href="@{/user/css/meanmenu.css}"/>
+        <!-- owl carousel CSS -->
+        <link rel="stylesheet" th:href="@{/user/css/owl.carousel.min.css}"/>
+        <!-- Slick Carousel CSS -->
+        <link rel="stylesheet" th:href="@{/user/css/slick.css}"/>
+        <!-- Animate CSS -->
+        <link rel="stylesheet" th:href="@{/user/css/animate.css}"/>
+        <!-- Jquery-ui CSS -->
+        <link rel="stylesheet" th:href="@{/user/css/jquery-ui.min.css}"/>
+        <!-- Venobox CSS -->
+        <link rel="stylesheet" th:href="@{/user/css/venobox.css}"/>
+        <!-- Nice Select CSS -->
+        <link rel="stylesheet" th:href="@{/user/css/nice-select.css}"/>
+        <!-- Magnific Popup CSS -->
+        <link rel="stylesheet" th:href="@{/user/css/magnific-popup.css}"/>
+        <!-- Bootstrap V4.1.3 Fremwork CSS -->
+        <link rel="stylesheet" th:href="@{/user/css/bootstrap.min.css}"/>
+        <!-- Helper CSS -->
+        <link rel="stylesheet" th:href="@{/user/css/helper.css}"/>
+        <!-- Main Style CSS -->
+        <link rel="stylesheet" th:href="@{/user/style.css}"/>
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" th:href="@{/user/css/responsive.css}"/>
+        <!-- Modernizr js -->
+        <script th:src="@{/user/js/vendor/modernizr-2.8.3.min.js}"></script>
+    </head>
+    <body>
+    <!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+        <!-- Begin Body Wrapper -->
+        <div class="body-wrapper">
+            <!-- Begin Header Area -->
+            <header>
+                <!-- Begin Header Top Area -->
+                <div class="header-top">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Begin Header Top Left Area -->
+                            <div class="col-lg-3 col-md-4">
+                                <div class="header-top-left">
+                                    
+                                </div>
+                            </div>
+                            <!-- Header Top Left Area End Here -->
+                            <!-- Begin Header Top Right Area -->
+                            <div class="col-lg-9 col-md-8">
+                                <div class="header-top-right">
+                                    <ul class="ht-menu">
+                                        <!-- Begin Setting Area -->
+                                        <li>
+                                            <div class="ht-setting-trigger"><span th:text="${session.userLogin.email}"></span></div>
+                                            <div class="setting ht-setting">
+                                                <ul class="ht-setting-list">
+                                                    <li><a href="/Login">Đăng nhập</a></li>
+                                                    <li><a href="/Logout">Đăng xuất</a></li>
+                                                    <li><a href="/CheckOut">Thông tin</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <!-- Setting Area End Here -->
+                                        <!-- Begin Language Area -->
+                                        <li>
+                                            <span class="language-selector-wrapper">Ngôn ngữ:</span>
+                                            <div class="ht-language-trigger"><span>Vietnamese</span></div>
+                                            <div class="language ht-language">
+                                                <ul class="ht-setting-list">
+                                                    <li class="active"><a href="#">Vietnamese</a></li>
+                                                    <li><a href="#">English</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <!-- Language Area End Here -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Header Top Right Area End Here -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Header Top Area End Here -->
+                <!-- Begin Header Middle Area -->
+                <div class="header-middle pl-sm-0 pr-sm-0 pl-xs-0 pr-xs-0">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Begin Header Logo Area -->
+                            <div class="col-lg-3">
+                                <div class="logo pb-sm-30 pb-xs-30">
+                                    <a href="index.html">
+                                        <img src="/user/images/menu/logo/ngochung.jpg" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Header Logo Area End Here -->
+                            <!-- Begin Header Middle Right Area -->
+                            <div class="col-lg-9">
+                                <!-- Begin Header Middle Searchbox Area -->
+                                <form action="/searchProduct" class="hm-searchbox">
+                                    <input type="text" placeholder="Nhập từ khóa tìm kiếm ..." name="keyword"/>
+                                    <button class="li-btn" type="submit"><i class="fa fa-search"></i></button>
+                                </form>
+                                <!-- Header Middle Searchbox Area End Here -->
+                                <!-- Begin Header Middle Right Area -->
+                                <div class="header-middle-right">
+                                    <ul class="hm-menu">
+                                        <!-- Begin Header Middle Wishlist Area -->
+                                        <li class="hm-wishlist">
+                                            <a href="wishlist.html">
+                                                <span class="cart-item-count wishlist-item-count">0</span>
+                                                <i class="fa fa-heart-o"></i>
+                                            </a>
+                                        </li>
+                                        <!-- Header Middle Wishlist Area End Here -->
+                                        <!-- Begin Header Mini Cart Area -->
+                                        <li class="hm-minicart">
+                                            <div class="cart">
+                                                <span class="item-icon"></span>
+                                                <span class="item-text"><a href="/shopping-cart">Giỏ hàng</a>
+                                                    <div th:if="${session.order}">
+                                                        <span class="cart-item-count" th:text="${session.order.getItems().size()}"></span>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <!-- Header Mini Cart Area End Here -->
+                                    </ul>
+                                </div>
+                                <!-- Header Middle Right Area End Here -->
+                            </div>
+                            <!-- Header Middle Right Area End Here -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Header Middle Area End Here -->
+                <!-- Begin Header Bottom Area -->
+                <div class="header-bottom header-sticky stick d-none d-lg-block d-xl-block">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!-- Begin Header Bottom Menu Area -->
+                                <div class="hb-menu hb-menu-2">
+                                    <nav>
+                                        <ul>
+                                            <li class="dropdown-holder"><a href="/user/index">Trang chủ</a>
+                                            </li>
+                                            <li class="megamenu-static-holder"><a href="/user/about-us">Giới thiệu</a></li>
+                                            <li><a href="/user/contact">Liên hệ</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <!-- Header Bottom Menu Area End Here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header Bottom Area End Here -->
+                <!-- Begin Mobile Menu Area -->
+                <div class="mobile-menu-area d-lg-none d-xl-none col-12">
+                    <div class="container"> 
+                        <div class="row">
+                            <div class="mobile-menu">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile Menu Area End Here -->
+            </header>
+            <!-- Header Area End Here -->
+            <!-- Begin Slider With Category Menu Area -->
+            <div class="slider-with-banner">
+                <div class="container">
+                    <div class="row">
+                        <!-- Begin Category Menu Area -->
+                        <div class="col-lg-3">
+                            <!--Category Menu Start-->
+                            <div class="category-menu category-menu-2">
+                                <div class="category-heading">
+                                    <h2 class="categories-toggle"><span>Danh mục sản phẩm</span></h2>
+                                </div>
+                                <div id="cate-toggle" class="category-menu-list">
+                                    <ul th:each="danhMuc,state : ${listDanhMuc}">
+                                      <li class="right-menu"><a th:href="@{'/findProduct/' + ${danhMuc.id_danh_muc}}" th:text="${danhMuc.ten_danh_muc}">Laptop</a>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--Category Menu End-->
+                        </div>
+                        <!-- Category Menu Area End Here -->
+                        <!-- Begin Slider Area -->
+                        <div class="col-lg-6 col-md-8">
+                            <div class="slider-area slider-area-3 pt-sm-30 pt-xs-30 pb-xs-30">
+                                <div class="slider-active owl-carousel">
+                                    <!-- Begin Single Slide Area -->
+                                    <div class="single-slide align-center-left animation-style-01 bg-7">
+                                        <div class="slider-progress"></div>
+                                        <div class="slider-content">
+                                            <div class="default-btn slide-btn">
+                                                <a class="links" href="Categories.html">Shopping Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Slide Area End Here -->
+                                    <!-- Begin Single Slide Area -->
+                                    <div class="single-slide align-center-left animation-style-02 bg-8">
+                                        <div class="slider-progress"></div>
+                                        <div class="slider-content">
+                                            <div class="default-btn slide-btn">
+                                                <a class="links" href="/product-detail">Shopping Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Slide Area End Here -->
+                                    <!-- Begin Single Slide Area -->
+                                    <div class="single-slide align-center-left animation-style-01 bg-9">
+                                        <div class="slider-progress"></div>
+                                        <div class="slider-content">
+                                            <div class="default-btn slide-btn">
+                                                <a class="links" href="/product-detail">Shopping Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Slide Area End Here -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slider Area End Here -->
+                        <!-- Begin Li Banner Area -->
+                        <div class="col-lg-3 col-md-4 text-center pt-sm-30">
+                            <div class="li-banner">
+                                <a href="#">
+                                    <img src="/user/images/banner/1.jpg" width="270px" height="205px" alt=""/>
+                                </a>
+                            </div>
+                            <div class="li-banner mt-15 mt-sm-30 mt-xs-25 mb-xs-5">
+                                <a href="#">
+                                    <img src="/user/images/banner/2.jpg" width="270px" height="205px" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Li Banner Area End Here -->
+                    </div>
+                </div>
+            </div>
+            <!-- Slider With Category Menu Area End Here -->
+            <!-- Begin Li's Static Banner Area -->
+            <div class="li-static-banner pt-20 pt-sm-30">
+                <div class="container">
+                    <div class="row">
+                        <!-- Begin Single Banner Area -->
+                        <div class="col-lg-4 col-md-4 text-center">
+                            <div class="single-banner pb-xs-30">
+                                <a href="#">
+                                    <img src="/user/images/banner/3.jpg" alt="Li's Static Banner"/>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Single Banner Area End Here -->
+                        <!-- Begin Single Banner Area -->
+                        <div class="col-lg-4 col-md-4 text-center">
+                            <div class="single-banner pb-xs-30">
+                                <a href="#">
+                                    <img src="/user/images/banner/3.jpg" alt="Li's Static Banner"/>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Single Banner Area End Here -->
+                        <!-- Begin Single Banner Area -->
+                        <div class="col-lg-4 col-md-4 text-center">
+                            <div class="single-banner">
+                                <a href="#">
+                                    <img src="/user/images/banner/3.jpg" alt="Li's Static Banner"/>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Single Banner Area End Here -->
+                    </div>
+                </div>
+            </div>
+            <!-- Li's Static Banner Area End Here -->
+            <!-- Begin Li's Special Product Area -->
+            <section class="product-area li-laptop-product Special-product pt-60 pb-45">
+                <div class="container">
+                    <div class="row">
+                        <!-- Begin Li's Section Area -->
+                        <div class="col-lg-12">
+                            <div class="li-section-title">
+                                <h2>
+                                    <span>Sản phẩm bán chạy</span>
+                                </h2>
+                            </div>
+                            <div class="row">
+                                <div class="special-product-active owl-carousel">
+                                    <div class="col-lg-12" th:each="product1,state : ${listProduct1}">
+                                        <!-- single-product-wrap start -->
+                                        <div class="single-product-wrap">
+                                            <div class="product-image">
+                                                <a th:href="@{'/product/product-detail/' + ${product1.idSanPham}}">
+                                                    <img th:src="'/'+${product1.hinhAnh}" alt="Li's Product Image"/>
+                                                </a>
+                                                <span class="sticker">New</span>
+                                            </div>
+                                            <div class="product_desc">
+                                                <div class="product_desc_info">
+                                                    <div class="product-review">
+                                                        <h5 class="manufacturer">
+                                                            <a th:href="@{'/product/product-detail/' + ${product1.idSanPham}}">Mã sản phẩm: <span th:text="${product1.idSanPham}"></span></a>
+                                                        </h5>
+                                                        <div class="rating-box">
+                                                            <ul class="rating">
+                                                                <li><i class="fa fa-star-o"></i></li>
+                                                                <li><i class="fa fa-star-o"></i></li>
+                                                                <li><i class="fa fa-star-o"></i></li>
+                                                                <li class="no-star"><i class="fa fa-star-o"></i></li>
+                                                                <li class="no-star"><i class="fa fa-star-o"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <h4><a class="product_name" th:href="@{'/product/product-detail/' + ${product1.idSanPham}}" th:text="${product1.tenSanPham}"></a></h4>
+                                                    <div class="price-box">
+                                                        <span class="new-price" th:text="${#numbers.formatInteger(product1.giaSanPham,3, 'POINT')}+ '  '+ VNĐ"></span>
+                                                    </div>
+                                                    <div class="countersection">
+                                                        <div class="li-countdown"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="add-actions">
+                                                    <ul class="add-actions-link">
+                                                        <li class="add-cart active"><a th:href="@{'/add-cart?id=' + ${product1.idSanPham} +'&soLuong=1'}">Thêm vào giỏ</a></li>
+                                                        <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
+                                                        <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- single-product-wrap end -->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Li's Section Area End Here -->
+                    </div>
+                </div>
+            </section>
+            <!-- Li's Special Product Area End Here -->
+            <!-- Begin Featured Product With Banner Area -->
+            <div class="featured-pro-with-banner mt-sm-5 pb-sm-10 mt-xs-5 pb-xs-10">
+                <div class="container">
+                    <div class="row">
+                        <!-- Begin Li's Featured Banner Area -->
+                        <div class="col-lg-3 text-center">
+                            <div class="single-banner featured-banner">
+                                <a href="#">
+                                    <img src="/user/images/banner/featured-banner.jpg" alt="Li's Featured Banner">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Li's Featured Banner Area End Here -->
+                        <!-- Begin Featured Product Area -->
+                        <div class="col-lg-9">
+                            <div class="featured-product pt-sm-30 pt-xs-30">
+                                <div class="li-section-title">
+                                    <h2>
+                                        <span>Sản phẩm mới</span>
+                                    </h2>
+                                </div>
+                                <div class="row">
+                                    <div class="featured-product-active owl-carousel">
+                                        <div class="featured-product-bundle"  th:each="product2,state : ${listProduct2}">
+                                            <div class="featured-pro-wrapper mb-30 mb-sm-25">
+                                                <div class="product-img">
+                                                    <a href="product-detail">
+                                                        <img alt="" th:src="'/'+${product2.hinhAnh}"/>
+                                                    </a>
+                                                </div>
+                                                <div class="featured-pro-content">
+                                                    <div class="product-review">
+                                                        <h5 class="manufacturer">
+                                                            <a  th:href="@{'/product/product-detail/' + ${product2.idSanPham}}">Mã sản phẩm: <span th:text="${product2.idSanPham}"></span></a>
+                                                        </h5>
+                                                    </div>
+                                                    <div class="rating-box">
+                                                        <ul class="rating">
+                                                            <li><i class="fa fa-star-o"></i></li>
+                                                            <li><i class="fa fa-star-o"></i></li>
+                                                            <li><i class="fa fa-star-o"></i></li>
+                                                            <li class="no-star"><i class="fa fa-star-o"></i></li>
+                                                            <li class="no-star"><i class="fa fa-star-o"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                    <h4><a class="featured-product-name" th:href="@{'/product/product-detail/' + ${product2.idSanPham}}" th:text="${product2.tenSanPham}"></a></h4>
+                                                    <div class="featured-price-box">
+                                                        <span class="new-price new-price-2" th:text="${#numbers.formatInteger(product2.khuyenMai,3, 'POINT')}+ '  '+ VNĐ">20.000.000VNĐ</span>
+                                                        <span class="old-price" th:text="${#numbers.formatInteger(product2.giaSanPham,3, 'POINT')}+ '  '+ VNĐ">10.000.000VNĐ</span>
+                                                        <span class="discount-percentage">-12%</span>
+                                                    </div>
+                                                    <div class="featured-product-action">
+                                                        <ul class="add-actions-link">
+                                                            <li class="add-cart active"><a th:href="@{'/add-cart?id=' + ${product2.idSanPham} +'&soLuong=1'}">Thêm vào giỏ</a></li>
+                                                            <li><a class="links-details" href="product-detail.html"><i class="fa fa-heart-o"></i></a></li>
+                                                            <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Featured Product Area End Here -->
+                    </div>
+                </div>
+            </div>
+            <!-- Featured Product With Banner Area End Here -->
+            <!-- Begin Li's Laptop Product Area -->
+            <section class="product-area li-laptop-product pt-60 pb-45">
+                <div class="container">
+                    <div class="row">
+                        <!-- Begin Li's Section Area -->
+                        <div class="col-lg-12">
+                            <div class="li-section-title">
+                                <h2>
+                                    <span>Sách khoa học</span>
+                                </h2>
+<!--                                <ul class="li-sub-category-list">-->
+<!--                                    <li class="active"><a href="#">Acer</a></li>-->
+<!--                                    <li><a href="#">Asus</a></li>-->
+<!--                                    <li><a href="#">Dell</a></li>-->
+<!--                                </ul>-->
+                            </div>
+                            <div class="row">
+                                <div class="product-active owl-carousel">
+                                    <div class="col-lg-12"  th:each="product1,state : ${listProduct1}">
+                                        <!-- single-product-wrap start -->
+                                       <div class="single-product-wrap">
+                                            <div class="product-image">
+                                                <a th:href="@{'/product/product-detail/' + ${product1.idSanPham}}">
+                                                    <img th:src="'/'+${product1.hinhAnh}" alt="Li's Product Image"/>
+                                                </a>
+                                                <span class="sticker">New</span>
+                                            </div>
+                                            <div class="product_desc">
+                                                <div class="product_desc_info">
+                                                    <div class="product-review">
+                                                        <h5 class="manufacturer">
+                                                            <a th:href="@{'/product/product-detail/' + ${product1.idSanPham}}">Mã sản phẩm: <span th:text="${product1.idSanPham}"></span></a>
+                                                        </h5>
+                                                        <div class="rating-box">
+                                                            <ul class="rating">
+                                                                <li><i class="fa fa-star-o"></i></li>
+                                                                <li><i class="fa fa-star-o"></i></li>
+                                                                <li><i class="fa fa-star-o"></i></li>
+                                                                <li class="no-star"><i class="fa fa-star-o"></i></li>
+                                                                <li class="no-star"><i class="fa fa-star-o"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <h4><a class="product_name" th:href="@{'/product/product-detail/' + ${product1.idSanPham}}" th:text="${product1.tenSanPham}"></a></h4>
+                                                    <div class="price-box">
+                                                        <span class="new-price" th:text="${#numbers.formatInteger(product1.khuyenMai,3, 'POINT')}+ '  '+ VNĐ">10.000.000VNĐ</span>
+                                                    </div>
+                                                    <div class="countersection">
+                                                        <div class="li-countdown"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="add-actions">
+                                                    <ul class="add-actions-link">
+                                                        <li class="add-cart active"><a th:href="@{'/add-cart?id=' + ${product1.idSanPham} +'&soLuong=1'}">Thêm vào giỏ</a></li>
+                                                        <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
+                                                        <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- single-product-wrap end -->
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Li's Section Area End Here -->
+                    </div>
+                </div>
+            </section>
+            <!-- Li's Laptop Product Area End Here -->
+            <!-- Begin Li's TV & Audio Product Area -->
+            <section class="product-area li-laptop-product li-tv-audio-product pb-45">
+                <div class="container">
+                    <div class="row">
+                        <!-- Begin Li's Section Area -->
+                        <div class="col-lg-12">
+                            <div class="li-section-title">
+                                <h2>
+                                    <span>Sách tài chính</span>
+                                </h2>
+<!--                                <ul class="li-sub-category-list">-->
+<!--                                    <li class="active"><a href="#">Acer</a></li>-->
+<!--                                    <li><a href="#">Asus</a></li>-->
+<!--                                    <li><a href="#">Dell</a></li>-->
+<!--                                </ul>-->
+                            </div>
+                            <div class="row">
+                                <div class="product-active owl-carousel">
+                                    <div class="col-lg-12" th:each="product4,state : ${listProduct4}">
+                                        <!-- single-product-wrap start -->
+                                      <div class="single-product-wrap">
+                                            <div class="product-image">
+                                                <a th:href="@{'/product/product-detail/' + ${product4.idSanPham}}">
+                                                    <img th:src=" '/'+${product4.hinhAnh}" alt="Li's Product Image"/>
+                                                </a>
+                                                <span class="sticker">New</span>
+                                            </div>
+                                            <div class="product_desc">
+                                                <div class="product_desc_info">
+                                                    <div class="product-review">
+                                                        <h5 class="manufacturer">
+                                                            <a th:href="@{'/product/product-detail/' + ${product4.idSanPham}}">Mã sản phẩm: <span th:text="${product4.idSanPham}"></span></a>
+                                                        </h5>
+                                                        <div class="rating-box">
+                                                            <ul class="rating">
+                                                                <li><i class="fa fa-star-o"></i></li>
+                                                                <li><i class="fa fa-star-o"></i></li>
+                                                                <li><i class="fa fa-star-o"></i></li>
+                                                                <li class="no-star"><i class="fa fa-star-o"></i></li>
+                                                                <li class="no-star"><i class="fa fa-star-o"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <h4><a class="product_name" th:href="@{'/product/product-detail/' + ${product4.idSanPham}}" th:text="${product4.tenSanPham}">PC ENTHUSIAST GAMING PLATINUM 03</a></h4>
+                                                    <div class="price-box">
+                                                        <span class="new-price" th:text="${#numbers.formatInteger(product4.khuyenMai,3, 'POINT')}+ '  '+ VNĐ">50.000.000VNĐ</span>
+                                                    </div>
+                                                    <div class="countersection">
+                                                        <div class="li-countdown"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="add-actions">
+                                                    <ul class="add-actions-link">
+                                                        <li class="add-cart active"><a th:href="@{'/add-cart?id=' + ${product4.idSanPham} +'&soLuong=1'}">Thêm vào giỏ</a></li>
+                                                        <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
+                                                        <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- single-product-wrap end -->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Li's Section Area End Here -->
+                    </div>
+                </div>
+            </section>
+            <!-- Li's TV & Audio Product Area End Here -->
+            <!-- Begin Li's Static Banner Area -->
+            <div class="li-static-banner li-static-banner-3 text-center">
+                <div class="container">
+                    <div class="row">
+                        <!-- Begin Single Banner Area -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="single-banner pb-xs-30">
+                                <a href="#">
+                                    <img src="/user/images/banner/4.jpg" alt="Li's Static Banner"/>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Single Banner Area End Here -->
+                        <!-- Begin Single Banner Area -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="single-banner">
+                                <a href="#">
+                                    <img src="/user/images/banner/5.jpg" alt="Li's Static Banner"/>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Single Banner Area End Here -->
+                    </div>
+                </div>
+            </div>
+            <!-- Li's Static Banner Area End Here -->
+            <!-- Begin Li's Trending Product Area -->
+            <section class="product-area li-trending-product pt-60 pb-45 pt-xs-50">
+                <div class="container">
+                    <div class="row">
+                        <!-- Begin Li's Tab Menu Area -->
+                        <div class="col-lg-12" >
+                            <div class="li-product-tab li-trending-product-tab">
+                                <h2>
+                                    <span>Sách thiếu nhi</span>
+                                </h2>
+<!--                                <ul class="nav li-product-menu li-trending-product-menu">-->
+<!--                                   <li><a class="active" data-toggle="tab" href="#home1"><span>Acer</span></a></li>-->
+<!--                                   <li><a data-toggle="tab" href="#home2"><span>Asus</span></a></li>-->
+<!--                                   <li><a data-toggle="tab" href="#home3"><span>Dell</span></a></li>-->
+<!--                                </ul>               -->
+                            </div>
+                            <!-- Begin Li's Tab Menu Content Area -->
+                            <div class="tab-content li-tab-content li-trending-product-content">
+                                <div id="home1" class="tab-pane show fade in active">
+                                    <div class="row">
+                                        <div class="product-active owl-carousel">
+                                            <div class="col-lg-12"  th:each="product1,state : ${listProduct1}">
+                                                <!-- single-product-wrap start -->
+                                                 <div class="single-product-wrap">
+                                            <div class="product-image">
+                                                <a th:href="@{'/product/product-detail/' + ${product1.idSanPham}}">
+                                                    <img th:src=" '/'+${product1.hinhAnh}" alt="Li's Product Image"/>
+                                                </a>
+                                                <span class="sticker">New</span>
+                                            </div>
+                                            <div class="product_desc">
+                                                <div class="product_desc_info">
+                                                    <div class="product-review">
+                                                        <h5 class="manufacturer">
+                                                            <a th:href="@{'product/product-detail/' + ${product1.idSanPham}}">Mã sản phẩm: <span th:text="${product1.idSanPham}"></span></a>
+                                                        </h5>
+                                                        <div class="rating-box">
+                                                            <ul class="rating">
+                                                                <li><i class="fa fa-star-o"></i></li>
+                                                                <li><i class="fa fa-star-o"></i></li>
+                                                                <li><i class="fa fa-star-o"></i></li>
+                                                                <li class="no-star"><i class="fa fa-star-o"></i></li>
+                                                                <li class="no-star"><i class="fa fa-star-o"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <h4><a class="product_name" th:href="@{'product/product-detail/' + ${product1.idSanPham}}" th:text="${product1.tenSanPham}">PC ENTHUSIAST GAMING PLATINUM 03</a></h4>
+                                                    <div class="price-box">
+                                                        <span class="new-price" th:text="${#numbers.formatInteger(product1.khuyenMai,3, 'POINT')}+ '  '+ VNĐ">50.000.000VNĐ</span>
+                                                    </div>
+                                                    <div class="countersection">
+                                                        <div class="li-countdown"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="add-actions">
+                                                    <ul class="add-actions-link">
+                                                        <li class="add-cart active"><a th:href="@{'add-cart?id=' + ${product1.idSanPham} +'&soLuong=1'}">Thêm vào giỏ</a></li>
+                                                        <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
+                                                        <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- single-product-wrap end -->
+                                    </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tab Menu Content Area End Here -->
+                        </div>
+                        <!-- Tab Menu Area End Here -->
+                    </div>
+                </div>
+            </section>
+            <!-- Li's Trending Product Area End Here -->
+            <!-- Begin Footer Area -->
+            <div class="footer">
+                <!-- Begin Footer Static Top Area -->
+                <div class="footer-static-top footer-static-top-3 pt-xs-50 pb-xs-10">
+                    <div class="container">
+                        <!-- Begin Footer Shipping Area -->
+                        <div class="footer-shipping pb-xs-0">
+                            <div class="row">
+                                <!-- Begin Li's Shipping Inner Box Area -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 pb-xs-45">
+                                    <div class="li-shipping-inner-box">
+                                        <div class="shipping-icon">
+                                            <img src="/user/images/shipping-icon/1.png" alt="Shipping Icon"/>
+                                        </div>
+                                        <div class="shipping-text">
+                                            <h2>Miễn phí vận chuyển</h2>
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Li's Shipping Inner Box Area End Here -->
+                                <!-- Begin Li's Shipping Inner Box Area -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 pb-xs-45">
+                                    <div class="li-shipping-inner-box">
+                                        <div class="shipping-icon">
+                                            <img src="/user/images/shipping-icon/2.png" alt="Shipping Icon"/>
+                                        </div>
+                                        <div class="shipping-text">
+                                            <h2>Giao dịch an toàn</h2>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Li's Shipping Inner Box Area End Here -->
+                                <!-- Begin Li's Shipping Inner Box Area -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 pb-xs-45">
+                                    <div class="li-shipping-inner-box">
+                                        <div class="shipping-icon">
+                                            <img src="/user/images/shipping-icon/3.png" alt="Shipping Icon"/>
+                                        </div>
+                                        <div class="shipping-text">
+                                            <h2>Tin tưởng</h2>
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Li's Shipping Inner Box Area End Here -->
+                                <!-- Begin Li's Shipping Inner Box Area -->
+                                <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="li-shipping-inner-box last-child">
+                                        <div class="shipping-icon">
+                                            <img src="/user/images/shipping-icon/4.png" alt="Shipping Icon"/>
+                                        </div>
+                                        <div class="shipping-text">
+                                            <h2>Hỗ trợ 24/7</h2>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Li's Shipping Inner Box Area End Here -->
+                            </div>
+                        </div>
+                        <!-- Footer Shipping Area End Here -->
+                    </div>
+                </div>
+                <!-- Footer Static Top Area End Here -->
+                <!-- Begin Footer Static Middle Area -->
+                <div class="footer-static-middle">
+                    <div class="container">
+                        <div class="footer-logo-wrap pt-50 pb-35">
+                            <div class="row">
+                                <!-- Begin Footer Logo Area -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="footer-logo">
+                                        <img src="/user/images/menu/logo/ngochung.jpg" alt="Footer Logo"/>
+                                        <p class="info">
+                                            HiHi
+                                        </p>
+                                    </div>
+                                    <ul class="des">
+                                        <li>
+                                            <span>Địa chỉ: </span>
+                                            Hà Nội
+                                        </li>
+                                        <li>
+                                            <span>Điện thoại: </span>
+                                            <a href="#">(+84) 123 321 345</a>
+                                        </li>
+                                        <li>
+                                            <span>Email: </span>
+                                            <a href="#">info@gmail.com</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Footer Logo Area End Here -->
+                                <!-- Begin Footer Block Area -->
+                                <div class="col-lg-2 col-md-3 col-sm-6">
+                                    <div class="footer-block">
+                                        <h3 class="footer-block-title">Sản phẩm</h3>
+                                        <ul>
+                                            <li><a href="#">Giảm giá</a></li>
+                                            <li><a href="#">Sản phẩm mới</a></li>
+                                            <li><a href="#">Sản phẩm bán chạy</a></li>
+                                            <li><a href="#">Liên hệ</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Footer Block Area End Here -->
+                                <!-- Begin Footer Block Area -->
+                                <div class="col-lg-2 col-md-3 col-sm-6">
+                                    <div class="footer-block">
+                                        <h3 class="footer-block-title">Công ty</h3>
+                                        <ul>
+                                            <li><a href="#">Vận chuyển</a></li>
+                                            <li><a href="#">Legal Notice</a></li>
+                                            <li><a href="#">About us</a></li>
+                                            <li><a href="#">Contact us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Footer Block Area End Here -->
+                                <!-- Begin Footer Block Area -->
+                                <div class="col-lg-4">
+                                    <div class="footer-block">
+                                        <h3 class="footer-block-title">Theo dõi chúng tôi</h3>
+                                        <ul class="social-link">
+                                            <li class="twitter">
+                                                <a href="#" data-toggle="tooltip" target="_blank" title="Twitter">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li class="rss">
+                                                <a href="#" data-toggle="tooltip" target="_blank" title="RSS">
+                                                    <i class="fa fa-rss"></i>
+                                                </a>
+                                            </li>
+                                            <li class="google-plus">
+                                                <a href="#" data-toggle="tooltip" target="_blank" title="Google +">
+                                                    <i class="fa fa-google-plus"></i>
+                                                </a>
+                                            </li>
+                                            <li class="facebook">
+                                                <a href="#" data-toggle="tooltip" target="_blank" title="Facebook">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li class="youtube">
+                                                <a href="#" data-toggle="tooltip" target="_blank" title="Youtube">
+                                                    <i class="fa fa-youtube"></i>
+                                                </a>
+                                            </li>
+                                            <li class="instagram">
+                                                <a href="#" data-toggle="tooltip" target="_blank" title="Instagram">
+                                                    <i class="fa fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Begin Footer Newsletter Area -->
+                                    <div class="footer-newsletter">
+                                        <h4>Sign up to newsletter</h4>
+                                        <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="footer-subscribe-form validate" target="_blank" novalidate>
+                                           <div id="mc_embed_signup_scroll">
+                                              <div id="mc-form" class="mc-form subscribe-form form-group" >
+                                                <input id="mc-email" type="email" autocomplete="off" placeholder="Enter your email" />
+                                                <button  class="btn" id="mc-submit">Subscribe</button>
+                                              </div>
+                                           </div>
+                                        </form>
+                                    </div>
+                                    <!-- Footer Newsletter Area End Here -->
+                                </div>
+                                <!-- Footer Block Area End Here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Static Middle Area End Here -->
+                <!-- Begin Footer Static Bottom Area -->
+                <div class="footer-static-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!-- Begin Footer Links Area -->
+                                
+                                <!-- Footer Links Area End Here -->
+                                <!-- Begin Footer Payment Area -->
+                                <div class="payment text-center">
+                                    <a href="#">
+                                        <img src="/user/images/payment/1.png" alt=""/>
+                                    </a>
+                                </div>
+                                <!-- Footer Payment Area End Here -->
+                                <!-- Begin Copyright Area -->
+                                <div class="copyright text-center pt-30 pb-50">
+                                    <span><a href="https://www.templatespoint.net" target="_blank">Templates Point</a></span>
+                                </div>
+                                <!-- Copyright Area End Here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Static Bottom Area End Here -->
+            </div>
+            <!-- Footer Area End Here -->
+        </div>
+        <!-- Body Wrapper End Here -->
+        <!-- jQuery-V1.12.4 -->
+        <script th:src="@{/user/js/vendor/jquery-1.12.4.min.js}"></script>
+        <!-- Popper js -->
+        <script th:src="@{/user/js/vendor/popper.min.js}"></script>
+        <!-- Bootstrap V4.1.3 Fremwork js -->
+        <script th:src="@{/user/js/bootstrap.min.js}"></script>
+        <!-- Ajax Mail js -->
+        <script th:src="@{/user/js/ajax-mail.js}"></script>
+        <!-- Meanmenu js -->
+        <script th:src="@{/user/js/jquery.meanmenu.min.js}"></script>
+        <!-- Wow.min js -->
+        <script th:src="@{/user/js/wow.min.js}"></script>
+        <!-- Slick Carousel js -->
+        <script th:src="@{/user/js/slick.min.js}"></script>
+        <!-- Owl Carousel-2 js -->
+        <script th:src="@{/user/js/owl.carousel.min.js}"></script>
+        <!-- Magnific popup js -->
+        <script th:src="@{/user/js/jquery.magnific-popup.min.js}"></script>
+        <!-- Isotope js -->
+        <script th:src="@{/user/js/isotope.pkgd.min.js}"></script>
+        <!-- Imagesloaded js -->
+        <script th:src="@{/user/js/imagesloaded.pkgd.min.js}"></script>
+        <!-- Mixitup js -->
+        <script th:src="@{/user/js/jquery.mixitup.min.js}"></script>
+        <!-- Countdown -->
+        <script th:src="@{/user/js/jquery.countdown.min.js}"></script>
+        <!-- Counterup -->
+        <script th:src="@{/user/js/jquery.counterup.min.js}"></script>
+        <!-- Waypoints -->
+        <script th:src="@{/user/js/waypoints.min.js}"></script>
+        <!-- Barrating -->
+        <script th:src="@{/user/js/jquery.barrating.min.js}"></script>
+        <!-- Jquery-ui -->
+        <script th:src="@{/user/js/jquery-ui.min.js}"></script>
+        <!-- Venobox -->
+        <script th:src="@{/user/js/venobox.min.js}"></script>
+        <!-- Nice Select js -->
+        <script th:src="@{/user/js/jquery.nice-select.min.js}"></script>
+        <!-- ScrollUp js -->
+        <script th:src="@{/user/js/scrollUp.min.js}"></script>
+        <!-- Main/Activator js -->
+        <script th:src="@{/user/js/main.js}"></script>
+        </div>
+    </body>
+
+<!-- index-331:41-->
+</html>

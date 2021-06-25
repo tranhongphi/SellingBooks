@@ -16,7 +16,7 @@ public class RegisterController {
     @Autowired
     private UserService userService;
     @GetMapping("/Register")
-    public String GetRegister() {return "Register";}
+    public String GetRegister() {return "user/Register";}
 
     @PostMapping("/Register")
     public String PostRegister(HttpServletRequest request, HttpSession session, Model model) {
@@ -27,20 +27,21 @@ public class RegisterController {
         String repassword = request.getParameter("repassword");
         if(!password.equals(repassword)) {
             model.addAttribute("messRegister", "Password is not match");
-            return "Register";
+            return "user/Register";
         }else {
             User user = new User();
             user.setFirstName(firstName);
             user.setLastName(lastName);
             user.setPassword(password);
             user.setEmail(email);
+            user.setUserRole(2);
             if(userService.findUserByEmail(email)!=null) {
                 model.addAttribute("messRegister","Email already exists");
-                return "Register";
+                return "user/Register";
             }else {
                 userService.saveUser(user);
                 session.setAttribute("userRegister", user);
-                return "Login";
+                return "user/Login";
             }
         }
     }

@@ -11,4 +11,7 @@ import java.util.List;
 public interface ProductRepository extends JpaRepository<SanPham, String> {
     public List<SanPham> findProductsByDanhMuc(int danhMuc);
     public SanPham findSanPhamByIdSanPham(String id);
+    public  List<SanPham> findAll();
+    @Query("SELECT sp FROM SanPham sp WHERE sp.tenSanPham LIKE %:keyword% OR sp.moTa LIKE %:keyword% OR sp.gioiThieu LIKE %:keyword%")
+    List<SanPham> findSanPham(String keyword);
 }

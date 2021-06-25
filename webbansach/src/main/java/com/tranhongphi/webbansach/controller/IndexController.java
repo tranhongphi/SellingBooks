@@ -17,7 +17,7 @@ public class IndexController {
     private DanhMucService danhMucService;
     @Autowired
     private ProductService productService;
-    @GetMapping("/index")
+    @GetMapping("/user/index")
     public String index(Model model) {
         List<DanhMuc> danhMucList = danhMucService.getAllDanhMuc();
         List<SanPham> productList1 = productService.getAllProductByDanhMuc(1);
@@ -27,6 +27,6 @@ public class IndexController {
         model.addAttribute("listProduct1", productList1);
         model.addAttribute("listProduct2", productList2);
         model.addAttribute("listProduct4", productList4);
-        return "index";
+        return "user/index";
     }
 }

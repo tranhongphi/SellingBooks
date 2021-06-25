@@ -9,8 +9,8 @@ public class SanPham {
     @Id
     private String idSanPham;
     private String tenSanPham;
-    private double giaSanPham;
-    private double khuyenMai;
+    private long giaSanPham;
+    private long khuyenMai;
     private String hinhAnh;
     private String tacGia;
     private double star;
@@ -34,19 +34,19 @@ public class SanPham {
         this.tenSanPham = tenSanPham;
     }
 
-    public double getGiaSanPham() {
+    public long getGiaSanPham() {
         return giaSanPham;
     }
 
-    public void setGiaSanPham(double giaSanPham) {
+    public void setGiaSanPham(long giaSanPham) {
         this.giaSanPham = giaSanPham;
     }
 
-    public double getKhuyenMai() {
+    public long getKhuyenMai() {
         return khuyenMai;
     }
 
-    public void setKhuyenMai(double khuyenMai) {
+    public void setKhuyenMai(long khuyenMai) {
         this.khuyenMai = khuyenMai;
     }
 

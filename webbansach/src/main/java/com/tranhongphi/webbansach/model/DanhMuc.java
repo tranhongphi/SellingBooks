@@ -1,9 +1,6 @@
 package com.tranhongphi.webbansach.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class DanhMuc {
@@ -16,6 +13,10 @@ public class DanhMuc {
 
     public int getId_danh_muc() {
         return id_danh_muc;
+    }
+
+    public void setId_danh_muc(int id_danh_muc) {
+        this.id_danh_muc = id_danh_muc;
     }
 
     public String getTen_danh_muc() {

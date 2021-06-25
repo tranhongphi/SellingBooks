@@ -1,11 +1,8 @@
 package com.tranhongphi.webbansach.controller;
 
-import com.tranhongphi.webbansach.model.Order;
 import com.tranhongphi.webbansach.model.User;
 import com.tranhongphi.webbansach.service.UserService;
-import com.tranhongphi.webbansach.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +19,7 @@ public class LoginController {
     public String GetLogin(HttpSession session) {
         User user = new User();
         session.setAttribute("userRegister", user);
-        return "Login";
+        return "user/Login";
     }
 
     @PostMapping("/Login")
@@ -33,11 +30,15 @@ public class LoginController {
         User userLogin = userService.findUserByEmailAndPassword(email, password);
         if(userLogin!=null) {
             session.setAttribute("userLogin", userLogin);
-            return "redirect:index";
+            if(userLogin.getUserRole()==1) {
+                return "redirect:admin";
+            }
+            else {return "redirect:user/index";
+            }
         }
         else {
             model.addAttribute("mess", "Email or password is not correct");
-            return "Login";
+            return "user/Login";
         }
     }
 }

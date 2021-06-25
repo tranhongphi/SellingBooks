@@ -5,6 +5,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class LienHeController {
-    @GetMapping("/contact")
-    public String lienHe() {return "contact";}
+    @GetMapping("user/contact")
+    public String lienHe() {return "user/contact";}
 }

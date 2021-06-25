@@ -5,6 +5,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class GioiThieuController {
-    @GetMapping("/about-us")
-    public String gioiThieu() {return "about-us";}
+    @GetMapping("/user/about-us")
+    public String gioiThieu() {return "user/about-us";}
 }
